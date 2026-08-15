@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psyduck — The Series</title>
+  <meta name="description" content="A birthday experience for Psyduck." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="countdownGate" class="gate" aria-hidden="false">
+    <div class="gate-noise"></div>
+    <div class="gate-content">
+      <p class="eyebrow">A Kanav ORIGINAL</p>
+      <h1 class="gate-title">PSYDUCK</h1>
+      <p class="eyebrow gate-premiere">SEASON PREMIERES IN <span class="scrawl">(be patient)</span></p>
+      <div class="countdown" id="countdown">
+        <div class="countdown-unit"><span class="countdown-number" id="cdDays">00</span><span class="countdown-label">Days</span></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit"><span class="countdown-number" id="cdHours">00</span><span class="countdown-label">Hours</span></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit"><span class="countdown-number" id="cdMinutes">00</span><span class="countdown-label">Minutes</span></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit"><span class="countdown-number" id="cdSeconds">00</span><span class="countdown-label">Seconds</span></div>
+      </div>
+      <p class="gate-date">SEPTEMBER 5, 2026</p>
+    </div>
+  </div>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div id="loader" class="loader">
+    <div class="loader-mark">P</div>
+    <div class="loader-line"><span></span></div>
+  </div>
+
+  <nav class="site-nav" id="siteNav">
+    <button class="nav-mark" data-scroll="#home">PSYDUCK</button>
+    <span class="nav-meta">S3 · E06 · BIRTHDAY CUT</span>
+  </nav>
+
+  <nav class="chapter-rail" id="chapterRail" aria-label="Chapters">
+    <button data-target="#home" data-label="Home"><span>01</span></button>
+    <button data-target="#origin" data-label="Origin"><span>02</span></button>
+    <button data-target="#lore" data-label="The Lore"><span>03</span></button>
+    <button data-target="#archive" data-label="Archive"><span>04</span></button>
+    <button data-target="#truth" data-label="Truth"><span>05</span></button>
+    <button data-target="#finale" data-label="Finale"><span>06</span></button>
+  </nav>
+
+  <main>
+    <!-- HERO / CINEMATIC INTRO -->
+    <section class="hero" id="home">
+      <div class="hero-noise"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">A [YOUR NAME] ORIGINAL <span class="scrawl">(low budget, high effort)</span></p>
+        <h1>PSYDUCK</h1>
+        <p class="hero-subtitle">The story so far.</p>
+        <button class="primary-btn" data-scroll="#origin">
+          <span>Enter the story</span>
+          <span>→</span>
+        </button>
+      </div>
+      <div class="scroll-hint">SCROLL TO BEGIN <span>↓</span></div>
+      <button class="skip-intro" id="skipIntro" data-scroll="#origin">
+        <span>Skip Intro</span><span>»</span>
+      </button>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro section-light">
+      <div class="intro-inner">
+        <p class="eyebrow dark">A VERY SERIOUS DOCUMENTARY <span class="scrawl scrawl-dark">(it's not)</span></p>
+        <h2 class="giant-text">THIS IS<br><span>PSYDUCK.</span></h2>
+        <div class="intro-side">
+          <!-- TIP: keep these to one word each. Four words, four sides of her. -->
+          <p>Confused.</p>
+          <p>Funny.</p>
+          <p>Caring.</p>
+          <p>Eccentric.</p>
+          <small>[FILL IN — swap these four words for whatever actually describes her]</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIGIN -->
+    <section class="origin section-yellow" id="origin">
+      <div class="origin-top">
+        <p class="eyebrow dark">EPISODE 01</p>
+        <h2>THE<br>ORIGIN</h2>
+      </div>
+      <div class="origin-grid">
+        <div class="origin-copy">
+          <span class="episode-label">01 / HOW IT STARTED</span>
+          <h3>It started in class.</h3>
+          <p class="fill-prompt">
+            [FILL IN — the short, funny version of how you two met. Two or three sentences.
+            Save the long version for the modal below.]
+          </p>
+          <button class="text-btn" data-modal="origin-modal">Read the full story →</button>
+        </div>
+        <div class="polaroid tilt-left">
+          <div class="photo-placeholder" data-photo="assets/photos/first-photo.jpg">
+            <span>YOUR FIRST PHOTO</span>
+            <small>Drop a file named first-photo.jpg into assets/photos</small>
+          </div>
+          <p>Chapter 01</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline section-dark" id="lore">
+      <div class="section-heading">
+        <p class="eyebrow">THE LORE</p>
+        <h2>Two years.<br><span>A lot happened.</span></h2>
+      </div>
+
+      <div class="memory-list">
+        <article class="memory-card">
+          <div class="memory-number">01</div>
+          <div class="memory-media placeholder-one" data-photo="assets/photos/project.jpg">
+            <span>PROJECT PHOTO / VIDEO</span>
+          </div>
+          <div class="memory-copy">
+            <p class="eyebrow">THE PROJECT ARC</p>
+            <h3>Somehow, we became project partners.</h3>
+            <p class="fill-prompt">[FILL IN — the project memory, or an inside joke from it]</p>
+          </div>
+        </article>
+
+        <article class="memory-card reverse">
+          <div class="memory-number">02</div>
+          <div class="memory-media placeholder-two" data-photo="assets/photos/fest.jpg">
+            <span>COLLEGE FEST PHOTO</span>
+          </div>
+          <div class="memory-copy">
+            <p class="eyebrow">COLLEGE FEST</p>
+            <h3>We went. We survived. We took photos.</h3>
+            <p class="fill-prompt">[FILL IN — your best fest memory]</p>
+          </div>
+        </article>
+
+        <article class="memory-card">
+          <div class="memory-number">03</div>
+          <div class="memory-media placeholder-three" data-video="assets/videos/garba.mp4" data-photo="assets/photos/garba.jpg">
+            <span>GARBA NIGHT PHOTO / VIDEO</span>
+          </div>
+          <div class="memory-copy">
+            <p class="eyebrow">GARBA NIGHT</p>
+            <h3>10% dancing. 90% memories. <span class="scrawl">(citation needed)</span></h3>
+            <p class="fill-prompt">[FILL IN — your actual Garba story]</p>
+          </div>
+        </article>
+
+        <article class="memory-card reverse">
+          <div class="memory-number">04</div>
+          <div class="memory-media placeholder-four" data-photo="assets/photos/late-night-call.jpg">
+            <span>LATE NIGHT CALL SCREENSHOT</span>
+          </div>
+          <div class="memory-copy">
+            <p class="eyebrow">2:13 AM ARCHIVE</p>
+            <h3>Some conversations only happen late at night.</h3>
+            <p class="fill-prompt">[FILL IN — a funny or meaningful late-night-call memory]</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CHAOS COLLAGE -->
+    <section class="collage section-cream" id="archive">
+      <div class="collage-title">
+        <p class="eyebrow dark">THE ARCHIVE</p>
+        <h2>MEMORIES<br><i>EVERYWHERE.</i></h2>
+      </div>
+
+      <div class="photo-wall">
+        <div class="wall-card card-a" data-video="assets/videos/wall-1.mp4" data-photo="assets/photos/wall-1.jpg">PHOTO 01</div>
+        <div class="wall-card card-b" data-video="assets/videos/wall-2.mp4" data-photo="assets/photos/wall-2.jpg">PHOTO 02</div>
+        <div class="wall-card card-c" data-video="assets/videos/wall-3.mp4" data-photo="assets/photos/wall-3.jpg">VIDEO 01</div>
+        <div class="wall-card card-d" data-video="assets/videos/wall-4.mp4" data-photo="assets/photos/wall-4.jpg">PHOTO 03</div>
+        <div class="wall-card card-e" data-video="assets/videos/wall-5.mp4" data-photo="assets/photos/wall-5.jpg">PHOTO 04</div>
+        <div class="wall-card card-f" data-video="assets/videos/wall-6.mp4" data-photo="assets/photos/wall-6.jpg">VIDEO 02</div>
+      </div>
+
+      <p class="wall-note">Drop matching files into <code>assets/photos</code> / <code>assets/videos</code> and these fill themselves in — no code editing needed. Any card can be a photo or a video (video wins if both exist).</p>
+    </section>
+
+    <!-- EMOTIONAL SHIFT -->
+    <section class="emotional section-dark" id="truth">
+      <div class="emotional-inner">
+        <p class="eyebrow">OKAY. JOKES ASIDE.</p>
+        <div class="emotional-lines">
+          <p>Two years.</p>
+          <p>A lot of memories.</p>
+          <p>A lot of conversations.</p>
+          <p>A lot of chaos.</p>
+          <p class="final-line">And somewhere along the way...</p>
+        </div>
+        <h2>YOU BECAME<br><span class="doodle-wrap">MY BEST FRIEND.<svg class="doodle" viewBox="0 0 520 140" aria-hidden="true"><path d="M14,74 C10,34 70,10 160,8 C270,6 430,14 498,44 C520,54 500,86 430,100 C320,122 120,128 40,104 C6,94 8,70 30,58" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg></span></h2>
+        <div class="emotional-photo" data-photo="assets/photos/favorite.jpg">YOUR FAVORITE PHOTO TOGETHER</div>
+      </div>
+    </section>
+
+    <!-- CINEMATIC FINALE -->
+    <section class="finale" id="finale">
+      <div class="finale-glow"></div>
+      <div class="finale-content">
+        <p class="eyebrow">A [YOUR NAME] ORIGINAL</p>
+        <h2>PSYDUCK</h2>
+        <p class="season">SEASON 3</p>
+        <p class="coming">COMING SOON</p>
+
+        <div class="credits">
+          <div><span>STARRING</span><strong>Khushi</strong></div>
+          <div><span>CO-STARRING</span><strong>[YOUR NAME]</strong></div>
+          <div><span>GENRE</span><strong>Comedy / Chaos / Friendship</strong></div>
+          <div><span>STATUS</span><strong>RENEWED</strong></div>
+        </div>
+
+        <button class="birthday-btn" data-modal="birthday-modal">Open birthday message ♥</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODALS -->
+  <div class="modal" id="origin-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close>×</button>
+      <p class="eyebrow dark">THE FULL STORY</p>
+      <h2>How we met</h2>
+      <p class="fill-prompt">[FILL IN — the complete story, as long as you want]</p>
+      <p class="fill-prompt">[Add another paragraph, an inside joke, or a screenshot if you want]</p>
+    </div>
+  </div>
+
+  <div class="modal" id="birthday-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card birthday-card">
+      <button class="modal-close" data-close>×</button>
+      <p class="eyebrow dark">FINAL MESSAGE</p>
+      <h2>Happy Birthday,<br>Khushi ♥</h2>
+      <p class="fill-prompt">
+        [FILL IN — this is the whole point of the site. Write it in your own voice,
+        like you're actually talking to her. Don't overthink it.]
+      </p>
+      <p class="signature">— [YOUR NAME]</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
