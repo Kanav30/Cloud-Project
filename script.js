@@ -194,7 +194,7 @@ function loadPhoto(el, src) {
   img.onload = () => {
     el.innerHTML = "";
     el.style.backgroundImage = `url("${src}")`;
-    el.style.backgroundSize = "cover";
+    el.style.backgroundSize = "contain";
     el.style.backgroundPosition = "center";
     el.style.backgroundRepeat = "no-repeat";
     el.classList.add("has-media");

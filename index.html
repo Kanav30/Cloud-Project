@@ -39,7 +39,7 @@
 
   <nav class="site-nav" id="siteNav">
     <button class="nav-mark" data-scroll="#home">PSYDUCK</button>
-    <span class="nav-meta">S3 · E06 · BIRTHDAY CUT</span>
+    <span class="nav-meta">BIRTHDAY CUT</span>
   </nav>
 
   <nav class="chapter-rail" id="chapterRail" aria-label="Chapters">
@@ -56,7 +56,7 @@
     <section class="hero" id="home">
       <div class="hero-noise"></div>
       <div class="hero-content reveal">
-        <p class="eyebrow">A [YOUR NAME] ORIGINAL <span class="scrawl">(low budget, high effort)</span></p>
+        <p class="eyebrow">A KANAV ORIGINAL <span class="scrawl">(low budget, high effort)</span></p>
         <h1>PSYDUCK</h1>
         <p class="hero-subtitle">The story so far.</p>
         <button class="primary-btn" data-scroll="#origin">
@@ -76,13 +76,14 @@
         <p class="eyebrow dark">A VERY SERIOUS DOCUMENTARY <span class="scrawl scrawl-dark">(it's not)</span></p>
         <h2 class="giant-text">THIS IS<br><span>PSYDUCK.</span></h2>
         <div class="intro-side">
-          <!-- TIP: keep these to one word each. Four words, four sides of her. -->
-          <p>Confused.</p>
-          <p>Funny.</p>
-          <p>Caring.</p>
-          <p>Eccentric.</p>
-          <small>[FILL IN — swap these four words for whatever actually describes her]</small>
+        <div class="intro-photo" data-photo="assets/photos/intro.jpg">
+          <span>ADD A PHOTO</span>
         </div>
+        <p>Confused.</p>
+        <p>Funny.</p>
+        <p>Caring.</p>
+        <p>Eccentric.</p>
+        <p>But the BEST no matter what.</p>
       </div>
     </section>
 
@@ -97,8 +98,9 @@
           <span class="episode-label">01 / HOW IT STARTED</span>
           <h3>It started in class.</h3>
           <p class="fill-prompt">
-            [FILL IN — the short, funny version of how you two met. Two or three sentences.
-            Save the long version for the modal below.]
+            Every class needs a CR right? Will generally a teacher would select the CR, but students can influence other
+            friends to become one am I right? Thats how it began, convincing her to become the CR. It was actually just for fun
+            but well she was convinced. ps she still is and a good one
           </p>
           <button class="text-btn" data-modal="origin-modal">Read the full story →</button>
         </div>
@@ -158,8 +160,10 @@
 
         <article class="memory-card reverse">
           <div class="memory-number">04</div>
-          <div class="memory-media placeholder-four" data-photo="assets/photos/late-night-call.jpg">
-            <span>LATE NIGHT CALL SCREENSHOT</span>
+          <div class="memory-media three-shots">
+            <div class="shot" data-photo="assets/photos/call-1.png"></div>
+            <div class="shot" data-photo="assets/photos/call-2.png"></div>
+            <div class="shot" data-photo="assets/photos/call-3.png"></div>
           </div>
           <div class="memory-copy">
             <p class="eyebrow">2:13 AM ARCHIVE</p>
@@ -184,9 +188,22 @@
         <div class="wall-card card-d" data-video="assets/videos/wall-4.mp4" data-photo="assets/photos/wall-4.jpg">PHOTO 03</div>
         <div class="wall-card card-e" data-video="assets/videos/wall-5.mp4" data-photo="assets/photos/wall-5.jpg">PHOTO 04</div>
         <div class="wall-card card-f" data-video="assets/videos/wall-6.mp4" data-photo="assets/photos/wall-6.jpg">VIDEO 02</div>
+        <div class="wall-card card-g" data-video="assets/videos/wall-7.mp4" data-photo="assets/photos/wall-7.jpg">MEDIA 07</div>
+        <div class="wall-card card-h" data-video="assets/videos/wall-8.mp4" data-photo="assets/photos/wall-8.jpg">MEDIA 08</div>
+        <div class="wall-card card-i" data-video="assets/videos/wall-9.mp4" data-photo="assets/photos/wall-9.jpg">MEDIA 09</div>
+        <div class="wall-card card-j" data-video="assets/videos/wall-10.mp4" data-photo="assets/photos/wall-10.jpg">MEDIA 10</div>
+        <div class="wall-card card-k" data-video="assets/videos/wall-11.mp4" data-photo="assets/photos/wall-11.jpg">MEDIA 11</div>
+        <div class="wall-card card-l" data-video="assets/videos/wall-12.mp4" data-photo="assets/photos/wall-12.jpg">MEDIA 12</div>
+        <div class="wall-card card-m" data-video="assets/videos/wall-13.mp4" data-photo="assets/photos/wall-13.jpg">MEDIA 09</div>
+        <div class="wall-card card-n" data-video="assets/videos/wall-14.mp4" data-photo="assets/photos/wall-14.jpg">MEDIA 10</div>
+        <div class="wall-card card-o" data-video="assets/videos/wall-15.mp4" data-photo="assets/photos/wall-15.jpg">MEDIA 11</div>
+        <div class="wall-card card-p" data-video="assets/videos/wall-16.mp4" data-photo="assets/photos/wall-16.jpg">MEDIA 12</div>
+        <div class="wall-card card-q" data-video="assets/videos/wall-17.mp4" data-photo="assets/photos/wall-17.jpg">PHOTO 04</div>
+        <div class="wall-card card-r" data-video="assets/videos/wall-18.mp4" data-photo="assets/photos/wall-18.jpg">VIDEO 02</div>
+        <div class="wall-card card-s" data-video="assets/videos/wall-19.mp4" data-photo="assets/photos/wall-19.jpg">MEDIA 07</div>
+        <div class="wall-card card-t" data-video="assets/videos/wall-20.mp4" data-photo="assets/photos/wall-20.jpg">MEDIA 08</div>
+        
       </div>
-
-      <p class="wall-note">Drop matching files into <code>assets/photos</code> / <code>assets/videos</code> and these fill themselves in — no code editing needed. Any card can be a photo or a video (video wins if both exist).</p>
     </section>
 
     <!-- EMOTIONAL SHIFT -->
@@ -201,7 +218,13 @@
           <p class="final-line">And somewhere along the way...</p>
         </div>
         <h2>YOU BECAME<br><span class="doodle-wrap">MY BEST FRIEND.<svg class="doodle" viewBox="0 0 520 140" aria-hidden="true"><path d="M14,74 C10,34 70,10 160,8 C270,6 430,14 498,44 C520,54 500,86 430,100 C320,122 120,128 40,104 C6,94 8,70 30,58" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg></span></h2>
-        <div class="emotional-photo" data-photo="assets/photos/favorite.jpg">YOUR FAVORITE PHOTO TOGETHER</div>
+        <div class="emotional-photos-wrapper">
+          <div class="emotional-photo" data-photo="assets/photos/favorite.jpg">YOUR FAVORITE PHOTO TOGETHER</div>
+          <div class="emotional-photo" data-photo="assets/photos/favorite-2.jpg">YOUR SECOND FAVORITE PHOTO</div>
+        </div>
+        <div class="emotional-video-center" data-video="assets/videos/center-video.mp4" data-photo="assets/photos/center-fallback.jpg">
+        YOUR FAVORITE VIDEO TOGETHER
+      </div>
       </div>
     </section>
 
@@ -211,8 +234,6 @@
       <div class="finale-content">
         <p class="eyebrow">A [YOUR NAME] ORIGINAL</p>
         <h2>PSYDUCK</h2>
-        <p class="season">SEASON 3</p>
-        <p class="coming">COMING SOON</p>
 
         <div class="credits">
           <div><span>STARRING</span><strong>Khushi</strong></div>
