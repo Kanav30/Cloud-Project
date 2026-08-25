@@ -217,14 +217,33 @@ function loadVideo(el, src, onFail) {
   video.addEventListener("error", () => { if (onFail) onFail(); }, { once: true });
 }
 
-// A slot can offer a video with a photo fallback (e.g. Garba night). Video is tried first;
-// if it 404s, the photo is tried instead. A slot with only data-photo just loads the photo.
-document.querySelectorAll("[data-video]").forEach(el => {
-  loadVideo(el, el.dataset.video, () => {
-    if (el.dataset.photo) loadPhoto(el, el.dataset.photo);
+// ===== LAZY LOAD MEDIA =====
+// This only loads photos/videos when the user is about to scroll to them
+const mediaObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      
+      // Load video if it exists, otherwise load photo
+      if (el.dataset.video) {
+        loadVideo(el, el.dataset.video, () => {
+          if (el.dataset.photo) loadPhoto(el, el.dataset.photo);
+        });
+      } else if (el.dataset.photo) {
+        loadPhoto(el, el.dataset.photo);
+      }
+      
+      // Stop observing once loaded
+      observer.unobserve(el);
+    }
   });
+}, { rootMargin: "400px" }); // Starts loading 400px before it enters the screen
+
+// Watch all media elements
+document.querySelectorAll("[data-video], [data-photo]").forEach(el => {
+  mediaObserver.observe(el);
 });
-document.querySelectorAll("[data-photo]:not([data-video])").forEach(el => loadPhoto(el, el.dataset.photo));
+
 
 // ===== Fill-prompt auto-clear =====
 // Once you've replaced "[FILL IN ..." text with your real copy, the dashed/italic
