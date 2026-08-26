@@ -736,7 +736,25 @@ body.gate-lock { overflow: hidden; height: 100%; }
   .memory-card, .memory-card.reverse { grid-template-columns: 1fr; gap: 1.5rem; min-height: auto; padding: 5rem 0; }
   .memory-card.reverse .memory-media, .memory-card.reverse .memory-copy { order: initial; }
   .memory-number { padding: 0; }
-  .photo-wall { height: 550px; }
+  .photo-wall { 
+    height: auto !important; 
+    display: flex;
+    flex-direction: column; /* Stacks the cards vertically */
+    align-items: center;
+    gap: 3rem; /* Adds breathing room between each photo */
+    padding: 2rem 0 5rem;
+  }
+  .wall-card {
+    position: relative !important; /* Ignores the messy desktop layout */
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 85vw !important; /* Takes up 85% of the phone screen width */
+    height: 150vw !important; /* Keeps the tall 9:16 vertical video shape */
+    max-width: 320px;
+    max-height: 560px;
+    margin: 0 auto;
+  }
   .credits { grid-template-columns: repeat(2, 1fr); }
 }
 
