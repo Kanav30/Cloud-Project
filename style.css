@@ -706,6 +706,8 @@ body.gate-lock { overflow: hidden; height: 100%; }
   width: min(700px, 100%);
   padding: clamp(2rem, 6vw, 5rem);
   box-shadow: 20px 20px 0 rgba(229,9,20,.8);
+  max-height: 85vh; 
+  overflow-y: auto;
 }
 .modal-card h2 { font: 600 clamp(3rem, 7vw, 6rem) var(--display); line-height: .85; letter-spacing: -.08em; margin: 0 0 2rem; }
 .modal-card p { line-height: 1.7; }
